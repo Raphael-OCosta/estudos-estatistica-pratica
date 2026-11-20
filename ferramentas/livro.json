@@ -1,0 +1,1028 @@
+{
+ "titulo": "Estatística Prática para Cientistas de Dados",
+ "subtitulo": "50 conceitos essenciais",
+ "autor": "Peter Bruce e Andrew Bruce",
+ "repo": "estudos-estatistica-pratica",
+ "linguagem": "python",
+ "paginas": 378,
+ "preparacao": "import numpy as np, pandas as pd\nimport matplotlib.pyplot as plt\nfrom scipy import stats\nimport statsmodels.api as sm\nimport statsmodels.formula.api as smf\nrng = np.random.default_rng(42)\nprint(\"Pronto. pandas\", pd.__version__)",
+ "capitulos": {
+  "1": {
+   "titulo": "Análise Exploratória de Dados",
+   "pag": 22,
+   "secoes": [
+    [
+     2,
+     "Elementos de Dados Estruturados",
+     23
+    ],
+    [
+     2,
+     "Dados Retangulares",
+     27
+    ],
+    [
+     2,
+     "Quadros de Dados e Índices",
+     29
+    ],
+    [
+     2,
+     "Estruturas de Dados Não Retangulares",
+     29
+    ],
+    [
+     2,
+     "Estimativas de Localização",
+     31
+    ],
+    [
+     2,
+     "Média",
+     33
+    ],
+    [
+     2,
+     "Mediana e Estimativas Robustas",
+     34
+    ],
+    [
+     2,
+     "Exemplo: Estimativas de Localização de População e Taxas de Homicídio",
+     36
+    ],
+    [
+     2,
+     "Estimativas de Variabilidade",
+     38
+    ],
+    [
+     2,
+     "Desvio-padrão e Estimativas Relacionadas",
+     39
+    ],
+    [
+     2,
+     "Estimativas Baseadas em Percentis",
+     41
+    ],
+    [
+     2,
+     "Exemplo: Estimativas de Variabilidade de População Estadual",
+     43
+    ],
+    [
+     2,
+     "Explorando a Distribuição de Dados",
+     45
+    ],
+    [
+     2,
+     "Percentis e Boxplots",
+     45
+    ],
+    [
+     2,
+     "Tabela de Frequências e Histogramas",
+     47
+    ],
+    [
+     2,
+     "Estimativas de Densidade",
+     49
+    ],
+    [
+     2,
+     "Explorando Dados Binários e Categóricos",
+     51
+    ],
+    [
+     2,
+     "Moda",
+     54
+    ],
+    [
+     2,
+     "Valor Esperado",
+     54
+    ],
+    [
+     2,
+     "Correlação",
+     55
+    ],
+    [
+     2,
+     "Gráficos de Dispersão",
+     59
+    ],
+    [
+     2,
+     "Explorando Duas ou Mais Variáveis",
+     61
+    ],
+    [
+     2,
+     "Compartimentação Hexagonal e Contornos (Representando Numéricos versus Dados Numéricos)",
+     61
+    ],
+    [
+     2,
+     "Duas Variáveis Categóricas",
+     64
+    ],
+    [
+     2,
+     "Dados Categóricos e Numéricos",
+     65
+    ],
+    [
+     2,
+     "Visualizando Variáveis Múltiplas",
+     67
+    ],
+    [
+     2,
+     "Resumo",
+     69
+    ]
+   ]
+  },
+  "2": {
+   "titulo": "Distribuições de Dados e Amostras",
+   "pag": 71,
+   "secoes": [
+    [
+     2,
+     "Amostragem Aleatória e Viés de Amostra",
+     72
+    ],
+    [
+     2,
+     "Viés",
+     74
+    ],
+    [
+     2,
+     "Seleção Aleatória",
+     75
+    ],
+    [
+     2,
+     "Tamanho versus Qualidade: Quando o tamanho importa?",
+     77
+    ],
+    [
+     2,
+     "Média Amostral versus Média Populacional",
+     78
+    ],
+    [
+     2,
+     "Viés de Seleção",
+     79
+    ],
+    [
+     2,
+     "Regressão à Média",
+     81
+    ],
+    [
+     2,
+     "Distribuição de Amostragem de uma Estatística",
+     84
+    ],
+    [
+     2,
+     "Teorema de Limite Central",
+     86
+    ],
+    [
+     2,
+     "Erro-padrão",
+     87
+    ],
+    [
+     2,
+     "O Bootstrap",
+     88
+    ],
+    [
+     2,
+     "Reamostragem versus Bootstrapping",
+     92
+    ],
+    [
+     2,
+     "Intervalos de Confiança",
+     93
+    ],
+    [
+     2,
+     "Distribuição Normal",
+     97
+    ],
+    [
+     2,
+     "Normal Padrão e Gráficos QQ",
+     98
+    ],
+    [
+     2,
+     "Distribuições de Cauda Longa",
+     100
+    ],
+    [
+     2,
+     "Distribuição t de Student",
+     103
+    ],
+    [
+     2,
+     "Distribuição Binomial",
+     106
+    ],
+    [
+     2,
+     "Poisson e Distribuições Relacionadas",
+     109
+    ],
+    [
+     2,
+     "Distribuições Poisson",
+     109
+    ],
+    [
+     2,
+     "Distribuição Exponencial",
+     110
+    ],
+    [
+     2,
+     "Estimando a Taxa de Falha",
+     111
+    ],
+    [
+     2,
+     "Distribuição Weibull",
+     112
+    ],
+    [
+     2,
+     "Resumo",
+     113
+    ]
+   ]
+  },
+  "3": {
+   "titulo": "Experimentos Estatísticos e Teste de Significância",
+   "pag": 115,
+   "secoes": [
+    [
+     2,
+     "Testagem A/B",
+     116
+    ],
+    [
+     2,
+     "Por que Ter um Grupo de Controle?",
+     119
+    ],
+    [
+     2,
+     "Por que apenas A/B? Por que Não C, D…?",
+     120
+    ],
+    [
+     2,
+     "Testes de Hipótese",
+     122
+    ],
+    [
+     2,
+     "A Hipótese Nula",
+     124
+    ],
+    [
+     2,
+     "Hipótese Alternativa",
+     125
+    ],
+    [
+     2,
+     "Teste de Hipótese Unilateral, Bilateral",
+     125
+    ],
+    [
+     2,
+     "Reamostragem",
+     127
+    ],
+    [
+     2,
+     "Teste de Permutação",
+     127
+    ],
+    [
+     2,
+     "Exemplo: Aderência Web",
+     129
+    ],
+    [
+     2,
+     "Testes de Permutação Exaustiva e Bootstrap",
+     131
+    ],
+    [
+     2,
+     "Testes de Permutação: A conclusão para a Ciência de Dados",
+     132
+    ],
+    [
+     2,
+     "Significância Estatística e Valores P",
+     133
+    ],
+    [
+     2,
+     "Valor P",
+     136
+    ],
+    [
+     2,
+     "Alfa",
+     137
+    ],
+    [
+     2,
+     "Erros Tipo 1 e Tipo 2",
+     138
+    ],
+    [
+     2,
+     "Ciência de Dados e Valores P",
+     139
+    ],
+    [
+     2,
+     "Testes t",
+     140
+    ],
+    [
+     2,
+     "Testagem Múltipla",
+     143
+    ],
+    [
+     2,
+     "Graus de Liberdade",
+     148
+    ],
+    [
+     2,
+     "ANOVA",
+     150
+    ],
+    [
+     2,
+     "Estatística F",
+     153
+    ],
+    [
+     2,
+     "ANOVA Bidirecional",
+     155
+    ],
+    [
+     2,
+     "Teste de Qui Quadrado",
+     156
+    ],
+    [
+     2,
+     "Teste de Qui Quadrado: Uma Abordagem à Reamostra",
+     157
+    ],
+    [
+     2,
+     "Teste de Qui Quadrado: Teoria Estatística",
+     159
+    ],
+    [
+     2,
+     "Teste Exato de Fisher",
+     160
+    ],
+    [
+     2,
+     "Relevância para a Ciência de Dados",
+     162
+    ],
+    [
+     2,
+     "Algoritmo de Bandido Multibraços",
+     164
+    ],
+    [
+     2,
+     "Potência e Tamanho de Amostra",
+     169
+    ],
+    [
+     2,
+     "Tamanho da Amostra",
+     171
+    ],
+    [
+     2,
+     "Resumo",
+     174
+    ]
+   ]
+  },
+  "4": {
+   "titulo": "Regressão e Previsão",
+   "pag": 175,
+   "secoes": [
+    [
+     2,
+     "Regressão Linear Simples",
+     175
+    ],
+    [
+     2,
+     "A Equação de Regressão",
+     177
+    ],
+    [
+     2,
+     "Valores Ajustados e Resíduos",
+     178
+    ],
+    [
+     2,
+     "Mínimos Quadrados",
+     180
+    ],
+    [
+     2,
+     "Previsão versus Explicação (Profiling)",
+     181
+    ],
+    [
+     2,
+     "Regressão Linear Múltipla",
+     183
+    ],
+    [
+     2,
+     "Exemplo: Dados Imobiliários de King County",
+     184
+    ],
+    [
+     2,
+     "Avaliando o Modelo",
+     185
+    ],
+    [
+     2,
+     "Validação Cruzada",
+     187
+    ],
+    [
+     2,
+     "Seleção de Modelo e Regressão Passo a Passo",
+     188
+    ],
+    [
+     2,
+     "Regressão Ponderada",
+     190
+    ],
+    [
+     2,
+     "Previsão Usando Regressão",
+     192
+    ],
+    [
+     2,
+     "Os Perigos da Extrapolação",
+     192
+    ],
+    [
+     2,
+     "Intervalos de Confiança e Previsão",
+     193
+    ],
+    [
+     2,
+     "Variáveis Fatoriais em Regressão",
+     195
+    ],
+    [
+     2,
+     "Representação de Variáveis Fictícias",
+     196
+    ],
+    [
+     2,
+     "Variáveis Fatoriais com Muitos Níveis",
+     198
+    ],
+    [
+     2,
+     "Variáveis de Fator Ordenado",
+     200
+    ],
+    [
+     2,
+     "Interpretando a Equação de Regressão",
+     201
+    ],
+    [
+     2,
+     "Preditoras Correlacionadas",
+     202
+    ],
+    [
+     2,
+     "Multicolinearidade",
+     203
+    ],
+    [
+     2,
+     "Variáveis de Confundimento",
+     204
+    ],
+    [
+     2,
+     "Interações e Efeitos Principais",
+     205
+    ],
+    [
+     2,
+     "Testando as Suposições: Diagnósticos de Regressão",
+     207
+    ],
+    [
+     2,
+     "Outliers",
+     208
+    ],
+    [
+     2,
+     "Valores Influentes",
+     210
+    ],
+    [
+     2,
+     "Heteroscedasticidade, Não Normalidade e Erros Correlacionados",
+     213
+    ],
+    [
+     2,
+     "Gráficos Residuais Parciais e Não Linearidade",
+     216
+    ],
+    [
+     2,
+     "Regressão Polinomial e Spline",
+     218
+    ],
+    [
+     2,
+     "Polinomial",
+     219
+    ],
+    [
+     2,
+     "Splines",
+     220
+    ],
+    [
+     2,
+     "Modelos Aditivos Generalizados",
+     222
+    ],
+    [
+     2,
+     "Resumo",
+     224
+    ]
+   ]
+  },
+  "5": {
+   "titulo": "Classificação",
+   "pag": 226,
+   "secoes": [
+    [
+     2,
+     "Naive Bayes",
+     228
+    ],
+    [
+     2,
+     "Por que a Classificação Bayesiana Exata é Impraticável",
+     229
+    ],
+    [
+     2,
+     "A Solução Naive",
+     229
+    ],
+    [
+     2,
+     "Variáveis Preditoras Numéricas",
+     231
+    ],
+    [
+     2,
+     "Análise Discriminante",
+     233
+    ],
+    [
+     2,
+     "Matriz de Covariância",
+     234
+    ],
+    [
+     2,
+     "Discriminante Linear de Fisher",
+     234
+    ],
+    [
+     2,
+     "Um Exemplo Simples",
+     235
+    ],
+    [
+     2,
+     "Regressão Logística",
+     238
+    ],
+    [
+     2,
+     "Função de Resposta Logística e Logito",
+     239
+    ],
+    [
+     2,
+     "Regressão Logística e o GLM",
+     241
+    ],
+    [
+     2,
+     "Modelos Lineares Generalizados",
+     242
+    ],
+    [
+     2,
+     "Valores Previstos a Partir da Regressão Logística",
+     243
+    ],
+    [
+     2,
+     "Interpretando os Coeficientes e as Razões de Chances",
+     243
+    ],
+    [
+     2,
+     "Regressão Linear e Logística: Semelhanças e Diferenças",
+     245
+    ],
+    [
+     2,
+     "Avaliando o Modelo",
+     247
+    ],
+    [
+     2,
+     "Avaliando Modelos de Classificação",
+     250
+    ],
+    [
+     2,
+     "Matriz de Confusão",
+     251
+    ],
+    [
+     2,
+     "O Problema da Classe Rara",
+     253
+    ],
+    [
+     2,
+     "Precisão, Revocação e Especificidade",
+     254
+    ],
+    [
+     2,
+     "Curva ROC",
+     255
+    ],
+    [
+     2,
+     "AUC",
+     257
+    ],
+    [
+     2,
+     "Lift",
+     258
+    ],
+    [
+     2,
+     "Estratégias para Dados Desequilibrados",
+     261
+    ],
+    [
+     2,
+     "Undersampling",
+     261
+    ],
+    [
+     2,
+     "Oversampling e Ponderação Acima/Abaixo",
+     263
+    ],
+    [
+     2,
+     "Geração de Dados",
+     264
+    ],
+    [
+     2,
+     "Classificação Baseada em Custos",
+     265
+    ],
+    [
+     2,
+     "Explorando as Previsões",
+     265
+    ],
+    [
+     2,
+     "Resumo",
+     267
+    ]
+   ]
+  },
+  "6": {
+   "titulo": "Aprendizado de Máquina Estatístico",
+   "pag": 269,
+   "secoes": [
+    [
+     2,
+     "K-Vizinhos Mais Próximos",
+     270
+    ],
+    [
+     2,
+     "Um Pequeno Exemplo: Prevendo Inadimplência em Empréstimos",
+     271
+    ],
+    [
+     2,
+     "Métricas de Distância",
+     274
+    ],
+    [
+     2,
+     "One Hot Encoder",
+     275
+    ],
+    [
+     2,
+     "Padronização (Normalização, Escores Z)",
+     276
+    ],
+    [
+     2,
+     "Escolhendo K",
+     278
+    ],
+    [
+     2,
+     "KNN como um Motor de Característica",
+     279
+    ],
+    [
+     2,
+     "Modelos de Árvore",
+     281
+    ],
+    [
+     2,
+     "Um Exemplo Simples",
+     283
+    ],
+    [
+     2,
+     "O Algoritmo Recursivo de Repartição",
+     285
+    ],
+    [
+     2,
+     "Medindo Homogeneidade ou Impureza",
+     286
+    ],
+    [
+     2,
+     "Fazendo a Árvore Parar de Crescer",
+     288
+    ],
+    [
+     2,
+     "Prevendo um Valor Contínuo",
+     290
+    ],
+    [
+     2,
+     "Como as Árvores São Usadas",
+     291
+    ],
+    [
+     2,
+     "Bagging e a Floresta Aleatória",
+     292
+    ],
+    [
+     2,
+     "Bagging",
+     294
+    ],
+    [
+     2,
+     "Floresta Aleatória",
+     295
+    ],
+    [
+     2,
+     "Importância da Variável",
+     298
+    ],
+    [
+     2,
+     "Hiperparâmetros",
+     301
+    ],
+    [
+     2,
+     "Boosting",
+     302
+    ],
+    [
+     2,
+     "O Algoritmo de Boosting",
+     304
+    ],
+    [
+     2,
+     "XGBoost",
+     305
+    ],
+    [
+     2,
+     "Regularização: Evitando Sobreajuste",
+     306
+    ],
+    [
+     2,
+     "Hiperparâmetros e Validação Cruzada",
+     310
+    ],
+    [
+     2,
+     "Resumo",
+     312
+    ]
+   ]
+  },
+  "7": {
+   "titulo": "Aprendizado Não Supervisionado",
+   "pag": 314,
+   "secoes": [
+    [
+     2,
+     "Análise dos Componentes Principais",
+     315
+    ],
+    [
+     2,
+     "Um Exemplo Simples",
+     317
+    ],
+    [
+     2,
+     "Calculando os Componentes Principais",
+     318
+    ],
+    [
+     2,
+     "Interpretando os Componentes Principais",
+     319
+    ],
+    [
+     2,
+     "Agrupamento por K-Médias",
+     322
+    ],
+    [
+     2,
+     "Um Exemplo Simples",
+     323
+    ],
+    [
+     2,
+     "Algoritmo de K-Médias",
+     325
+    ],
+    [
+     2,
+     "Interpretando os Agrupamentos",
+     326
+    ],
+    [
+     2,
+     "Escolhendo o Número de Grupos",
+     328
+    ],
+    [
+     2,
+     "Agrupamento Hierárquico",
+     330
+    ],
+    [
+     2,
+     "Um Exemplo Simples",
+     331
+    ],
+    [
+     2,
+     "O Dendrograma",
+     332
+    ],
+    [
+     2,
+     "O Algoritmo Aglomerativo",
+     333
+    ],
+    [
+     2,
+     "Medidas de Dissimilaridade",
+     334
+    ],
+    [
+     2,
+     "Agrupamento Baseado em Modelos",
+     336
+    ],
+    [
+     2,
+     "Distribuição Normal Multivariada",
+     336
+    ],
+    [
+     2,
+     "Misturas de Normais",
+     338
+    ],
+    [
+     2,
+     "Selecionando o Número de Grupos",
+     340
+    ],
+    [
+     2,
+     "Escalonamento e Variáveis Categóricas",
+     342
+    ],
+    [
+     2,
+     "Escalonando as Variáveis",
+     344
+    ],
+    [
+     2,
+     "Variáveis Dominantes",
+     345
+    ],
+    [
+     2,
+     "Dados Categóricos e Distância de Gower",
+     346
+    ],
+    [
+     2,
+     "Problemas com Agrupamento de Dados Mistos",
+     348
+    ],
+    [
+     2,
+     "Resumo",
+     350
+    ]
+   ]
+  }
+ }
+}
